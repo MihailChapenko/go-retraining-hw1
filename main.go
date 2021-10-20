@@ -3,17 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	for i := 1; i < 50; i++ {
-		devBy3and5 := i%3 == 0 && i%5 == 0
-		devBy3 := i%3 == 0
-		devBy5 := i%5 == 0
-
+	for i := 1; i <= 50; i++ {
 		switch {
-		case devBy3and5:
+		case i%15 == 0:
 			fmt.Print("Fizz Buzz,")
-		case devBy3:
+		case i%3 == 0:
 			fmt.Print("Fizz,")
-		case devBy5:
+		case i%5 == 0:
 			fmt.Print("Buzz,")
 		default:
 			fmt.Printf("%d,", i)
